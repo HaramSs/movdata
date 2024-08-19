@@ -39,7 +39,7 @@ def save_movies(year, per_page=10, sleep_time=1):
     all_data = []
     for page in tqdm(range(1, total_pages + 1)):
         time.sleep(sleep_time)
-        r = req(url_base + f"&curPage=1")
+        r = req(url_base + f"&curPage={page}")
         d = r['movieListResult']['movieList']
         all_data.extend(d)
 
