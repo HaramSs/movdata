@@ -19,7 +19,6 @@ def make_movie_info_data(year):
     for movie in tqdm(load_data):
         time.sleep(1)
         movie_cd = movie['movieCd']
-        print(movie_cd)
         movie_info = get_info_data(movie_cd)
         if movie_info:
             all_movie_info_data.append(movie_info)
